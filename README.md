@@ -1,17 +1,17 @@
 <h1 align="center">Picomatch</h1>
 
 <p align="center">
-<a href="https://npmjs.org/package/picomatch">
-<img src="https://img.shields.io/npm/v/picomatch.svg" alt="version">
+<a href="https://npmjs.org/package/@chance/picomatch">
+<img src="https://img.shields.io/npm/v/@chance/picomatch.svg" alt="version">
 </a>
-<a href="https://github.com/micromatch/picomatch/actions?workflow=Tests">
-<img src="https://github.com/micromatch/picomatch/workflows/Tests/badge.svg" alt="test status">
+<a href="https://github.com/chaance/picomatch/actions?workflow=Tests">
+<img src="https://github.com/chaance/picomatch/workflows/Tests/badge.svg" alt="test status">
 </a>
-<a href="https://coveralls.io/github/micromatch/picomatch">
-<img src="https://img.shields.io/coveralls/github/micromatch/picomatch/master.svg" alt="coverage status">
+<a href="https://coveralls.io/github/chaance/picomatch">
+<img src="https://img.shields.io/coveralls/github/chaance/picomatch/main.svg" alt="coverage status">
 </a>
-<a href="https://npmjs.org/package/picomatch">
-<img src="https://img.shields.io/npm/dm/picomatch.svg" alt="downloads">
+<a href="https://npmjs.org/package/@chance/picomatch">
+<img src="https://img.shields.io/npm/dm/@chance/picomatch.svg" alt="downloads">
 </a>
 </p>
 
@@ -107,7 +107,7 @@ console.log(isMatch("a/b.js")); //=> false
 
 ## API
 
-### [picomatch](lib/picomatch.js#L31)
+### [picomatch](lib/picomatch.js#L28)
 
 Creates a matcher function from one or more glob patterns. The returned function takes a string to match as its first argument, and returns true if the string is a match. The returned matcher function also takes a boolean as the second argument that, when true, returns an object with additional information.
 
@@ -145,7 +145,7 @@ console.log(isMatch("a\\b")); //=> true
 console.log(isMatch("a/b")); //=> true
 ```
 
-### [.test](lib/picomatch.js#L116)
+### [.test](lib/picomatch.js#L120)
 
 Test `input` with the given `regex`. This is used by the main `picomatch()` function to test the input string.
 
@@ -165,7 +165,7 @@ console.log(picomatch.test("foo/bar", /^(?:([^/]*?)\/([^/]*?))$/));
 // { isMatch: true, match: [ 'foo/', 'foo', 'bar' ], output: 'foo/bar' }
 ```
 
-### [.matchBase](lib/picomatch.js#L160)
+### [.matchBase](lib/picomatch.js#L163)
 
 Match the basename of a filepath.
 
@@ -183,7 +183,7 @@ import picomatch from '@chance/picomatch';
 console.log(picomatch.matchBase('foo/bar.js', '*.js'); // true
 ```
 
-### [.isMatch](lib/picomatch.js#L182)
+### [.isMatch](lib/picomatch.js#L184)
 
 Returns true if **any** of the given glob `patterns` match the specified `string`.
 
@@ -204,7 +204,7 @@ console.log(picomatch.isMatch("a.a", ["b.*", "*.a"])); //=> true
 console.log(picomatch.isMatch("a.a", "b.*")); //=> false
 ```
 
-### [.parse](lib/picomatch.js#L198)
+### [.parse](lib/picomatch.js#L200)
 
 Parse a glob pattern to create the source string for a regular expression.
 
@@ -221,7 +221,7 @@ import picomatch from '@chance/picomatch';
 const result = picomatch.parse(pattern[, options]);
 ```
 
-### [.scan](lib/picomatch.js#L230)
+### [.scan](lib/picomatch.js#L232)
 
 Scan a glob pattern to separate the pattern into segments.
 
@@ -252,7 +252,7 @@ console.log(result);
   negated: true }
 ```
 
-### [.compileRe](lib/picomatch.js#L244)
+### [.compileRe](lib/picomatch.js#L245)
 
 Compile a regular expression from the `state` object returned by the
 [parse()](#parse) method.
@@ -265,7 +265,7 @@ Compile a regular expression from the `state` object returned by the
 - `returnState` **{Boolean}**: Adds the state to a `state` property on the returned regex. Useful for implementors and debugging.
 - `returns` **{RegExp}**
 
-### [.makeRe](lib/picomatch.js#L285)
+### [.makeRe](lib/picomatch.js#L290)
 
 Create a regular expression from a parsed glob pattern.
 
@@ -288,7 +288,7 @@ console.log(picomatch.compileRe(state));
 //=> /^(?:(?!\.)(?=.)[^/]*?\.js)$/
 ```
 
-### [.toRegex](lib/picomatch.js#L320)
+### [.toRegex](lib/picomatch.js#L329)
 
 Create a regular expression from the given regex source string.
 

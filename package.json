@@ -57,38 +57,5 @@
       "lcov",
       "text-summary"
     ]
-  },
-  "verb": {
-    "toc": {
-      "render": true,
-      "method": "preWrite",
-      "maxdepth": 3
-    },
-    "layout": "empty",
-    "tasks": [
-      "readme"
-    ],
-    "plugins": [
-      "gulp-format-md"
-    ],
-    "lint": {
-      "reflinks": true
-    },
-    "related": {
-      "list": [
-        "braces",
-        "micromatch"
-      ]
-    },
-    "reflinks": [
-      "braces",
-      "expand-brackets",
-      "extglob",
-      "fill-range",
-      "micromatch",
-      "minimatch",
-      "nanomatch",
-      "picomatch"
-    ]
   }
 }
