@@ -2,15 +2,15 @@
   "name": "@chance/picomatch",
   "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
   "version": "4.0.2",
-  "homepage": "https://github.com/micromatch/picomatch",
+  "homepage": "https://github.com/chaance/picomatch",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "funding": "https://github.com/sponsors/jonschlinkert",
-  "repository": "micromatch/picomatch",
+  "repository": "chaance/picomatch",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/micromatch/picomatch/issues"
+    "url": "https://github.com/chaance/picomatch/issues"
   },
   "license": "MIT",
   "type": "module",
