@@ -51,7 +51,6 @@ Here are some tips for creating idiomatic issues. Taking just a little bit extra
 - use backticks to wrap code. This ensures that code will retain its format, making it much more readable to others
 - use syntax highlighting by adding the correct language name after the first "code fence"
 
-
 [node-glob]: https://github.com/isaacs/node-glob
 [micromatch]: https://github.com/jonschlinkert/micromatch
 [so]: http://stackoverflow.com/questions/tagged/picomatch

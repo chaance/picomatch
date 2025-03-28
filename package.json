@@ -1,5 +1,5 @@
 {
-  "name": "picomatch",
+  "name": "@chance/picomatch",
   "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
   "version": "4.0.2",
   "homepage": "https://github.com/micromatch/picomatch",
@@ -10,6 +10,7 @@
     "url": "https://github.com/micromatch/picomatch/issues"
   },
   "license": "MIT",
+  "type": "module",
   "files": [
     "index.js",
     "posix.js",
@@ -17,23 +18,30 @@
   ],
   "sideEffects": false,
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./posix": "./posix.js"
+  },
   "engines": {
-    "node": ">=12"
+    "node": ">=20"
   },
   "scripts": {
     "lint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives --ignore-path .gitignore .",
     "mocha": "mocha --reporter dot",
-    "test": "npm run lint && npm run mocha",
+    "test": "npm run mocha",
     "test:ci": "npm run test:cover",
-    "test:cover": "nyc npm run mocha"
+    "test:cover": "nyc npm run mocha",
+    "format": "prettier --write '**/*.js' '**/*.json' '**/*.md'"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "fill-range": "^7.0.1",
+    "glob-parent": "^6.0.2",
     "gulp-format-md": "^2.0.0",
+    "minimatch": "^9.0.3",
     "mocha": "^10.4.0",
     "nyc": "^15.1.0",
-    "time-require": "github:jonschlinkert/time-require"
+    "prettier": "^3.5.3"
   },
   "keywords": [
     "glob",

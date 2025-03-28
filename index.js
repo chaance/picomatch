@@ -1,7 +1,5 @@
-'use strict';
-
-const pico = require('./lib/picomatch');
-const utils = require('./lib/utils');
+import pico from "./lib/picomatch.js";
+import * as utils from "./lib/utils.js";
 
 function picomatch(glob, options, returnState = false) {
   // default to os.platform()
@@ -14,4 +12,4 @@ function picomatch(glob, options, returnState = false) {
 }
 
 Object.assign(picomatch, pico);
-module.exports = picomatch;
+export default picomatch;

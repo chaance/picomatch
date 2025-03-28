@@ -1,6 +1,4 @@
-'use strict';
-
-const pm = require('..');
+import pm from "../index.js";
 
 const onMatch = ({ glob, regex, input, output }) => {
   console.log({ input, output });
@@ -9,7 +7,7 @@ const onMatch = ({ glob, regex, input, output }) => {
   // { input: 'some\\path', output: 'some/path' }
 };
 
-const isMatch = pm.matcher('**', { onMatch, posixSlashes: true });
-isMatch('some\\path');
-isMatch('some\\path');
-isMatch('some\\path');
+const isMatch = pm.matcher("**", { onMatch, posixSlashes: true });
+isMatch("some\\path");
+isMatch("some\\path");
+isMatch("some\\path");

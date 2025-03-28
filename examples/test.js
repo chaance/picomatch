@@ -1,6 +1,4 @@
-'use strict';
+import pm from "../index.js";
 
-const pm = require('..');
-
-console.log(pm.test('foo/bar', /^(?:([^/]*?)\/([^/]*?))$/));
+console.log(pm.test("foo/bar", /^(?:([^/]*?)\/([^/]*?))$/));
 // { isMatch: true, match: [ 'foo/', 'foo', 'bar' ], output: 'foo/bar' }

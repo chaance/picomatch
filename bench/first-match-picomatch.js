@@ -1,7 +1,5 @@
-'use strict';
+import pm from "../index.js";
 
-const pm = require('..');
-
-console.time('picomatch');
-console.log(pm.makeRe('**/*').test('foo/bar/baz/qux.js'));
-console.timeEnd('picomatch');
+console.time("picomatch");
+console.log(pm.makeRe("**/*").test("foo/bar/baz/qux.js"));
+console.timeEnd("picomatch");

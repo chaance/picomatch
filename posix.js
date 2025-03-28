@@ -1,3 +1,2 @@
-'use strict';
-
-module.exports = require('./lib/picomatch');
+import posix from "./lib/picomatch.js";
+export default posix;

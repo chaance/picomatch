@@ -1,8 +1,6 @@
-'use strict';
-
-const path = require('path');
-// const assert = require('assert');
-const pm = require('..');
+import path from "node:path";
+// import assert from 'node:assert';
+import pm from "../index.js";
 
 /**
  * Example function for matching an array of strings
@@ -10,7 +8,7 @@ const pm = require('..');
 
 const match = (list, pattern, options = {}) => {
   let normalize = false;
-  if (pattern.startsWith('./')) {
+  if (pattern.startsWith("./")) {
     pattern = pattern.slice(2);
     normalize = true;
   }
@@ -28,10 +26,19 @@ const match = (list, pattern, options = {}) => {
   return [...matches];
 };
 
-const fixtures = ['a.md', 'a/b.md', './a.md', './a/b.md', 'a/b/c.md', './a/b/c.md', '.\\a\\b\\c.md', 'a\\b\\c.md'];
+const fixtures = [
+  "a.md",
+  "a/b.md",
+  "./a.md",
+  "./a/b.md",
+  "a/b/c.md",
+  "./a/b/c.md",
+  ".\\a\\b\\c.md",
+  "a\\b\\c.md",
+];
 
-console.log(path.posix.normalize('./{a,b,c}/*.md'));
-console.log(match(fixtures, './**/*.md'));
+console.log(path.posix.normalize("./{a,b,c}/*.md"));
+console.log(match(fixtures, "./**/*.md"));
 // assert.deepEqual(match(fixtures, '**/*.md'), ['a.md', 'a/b.md', 'a/b/c.md', 'a\\b\\c.md']);
 // assert.deepEqual(match(fixtures, '**/*.md', { normalize: true, unixify: false }), ['a.md', 'a/b.md', 'a/b/c.md', 'a\\b\\c.md']);
 // assert.deepEqual(match(fixtures, '*.md'), ['a.md']);

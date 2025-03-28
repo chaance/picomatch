@@ -1,15 +1,13 @@
-'use strict';
-
-const picomatch = require('..');
+import picomatch from "../index.js";
 
 const fixtures = [
-  ['/file.d.ts', false],
-  ['/file.ts', true],
-  ['/file.d.something.ts', true],
-  ['/file.dhello.ts', true]
+  ["/file.d.ts", false],
+  ["/file.ts", true],
+  ["/file.d.something.ts", true],
+  ["/file.dhello.ts", true],
 ];
 
-const pattern = '/!(*.d).ts';
+const pattern = "/!(*.d).ts";
 const isMatch = picomatch(pattern);
 
-console.log(fixtures.map(f => [isMatch(f[0]), f[1]]));
+console.log(fixtures.map((f) => [isMatch(f[0]), f[1]]));
