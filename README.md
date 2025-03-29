@@ -1,4 +1,7 @@
-<h1 align="center">Picomatch</h1>
+<header>
+<h1 align="center"><code>@chance/picomatch</code></h1>
+<p align="center">An ESM fork of <a href="https://github.com/micromatch/picomatch">picomatch</a></p>
+</header>
 
 <p align="center">
 <a href="https://npmjs.org/package/@chance/picomatch">
@@ -6,9 +9,6 @@
 </a>
 <a href="https://github.com/chaance/picomatch/actions?workflow=Tests">
 <img src="https://github.com/chaance/picomatch/workflows/Tests/badge.svg" alt="test status">
-</a>
-<a href="https://coveralls.io/github/chaance/picomatch">
-<img src="https://img.shields.io/coveralls/github/chaance/picomatch/main.svg" alt="coverage status">
 </a>
 <a href="https://npmjs.org/package/@chance/picomatch">
 <img src="https://img.shields.io/npm/dm/@chance/picomatch.svg" alt="downloads">
@@ -618,9 +618,9 @@ The following table shows which features are supported by [minimatch](https://gi
 | Brace _matching_          | ✔          | ✔           | ✔          | -           | -         | ✔       | -                 |
 | Brace _expansion_         | ✔          | ✔           | -           | -           | -         | ✔       | -                 |
 | Extglobs                  | partial     | ✔           | ✔          | -           | ✔        | -        | -                 |
+| File system operations    | -           | -            | -           | -           | -         | -        | -                 |
 | Posix brackets            | -           | ✔           | ✔          | -           | -         | -        | ✔                |
 | Regular expression syntax | -           | ✔           | ✔          | ✔          | ✔        | -        | ✔                |
-| File system operations    | -           | -            | -           | -           | -         | -        | -                 |
 
 <br>
 <br>
